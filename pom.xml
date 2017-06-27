@@ -24,11 +24,20 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
+    <profiles>
+        <profile>
+            <id>gatling-profile</id>
+            <properties>
+                <targetEnv>${targetEnv}</targetEnv>
+            </properties>
+        </profile>
+    </profiles>
 
     <build>
 
+
         <plugins>
+
             <plugin>
                 <groupId>net.alchim31.maven</groupId>
                 <artifactId>scala-maven-plugin</artifactId>
@@ -50,6 +59,7 @@
                                     <param>org.thoughtworks.sampleRT.simulations</param>
 
                                 </includes>
+
                             </configuration>
 
 
