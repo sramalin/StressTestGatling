@@ -23,6 +23,11 @@
             <version>${gatling.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>io.gatling</groupId>
+            <artifactId>gatling-core</artifactId>
+            <version>2.2.5</version>
+        </dependency>
     </dependencies>
     <profiles>
         <profile>
@@ -50,15 +55,21 @@
                 <executions>
                     <execution>
                         <goals>
-                            <goal>execute</goal>
+                            <goal>test</goal>
                         </goals>
 
                             <configuration>
-                                <runMultipleSimulations>true</runMultipleSimulations>
-                                <includes>
-                                    <param>org.thoughtworks.sampleRT.simulations</param>
 
+                                <runMultipleSimulations>true</runMultipleSimulations>
+                                <simulationsFolder>src/test/scala</simulationsFolder>
+                                <includes>
+                                    <include>**/org.thoughtworks.sampleRT.simulations/*.scala</include>
                                 </includes>
+                                <simulationClass>deviceStatus</simulationClass>
+                                <simulationClass>armDevice</simulationClass>
+                                <simulationClass>disarmDevice</simulationClass>
+
+
 
                             </configuration>
 

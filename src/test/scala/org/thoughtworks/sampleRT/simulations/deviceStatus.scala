@@ -1,11 +1,6 @@
 package  org.thoughtworks.sampleRT.simulations;
 
-
-
-
-
 import java.io.File
-
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 import com.typesafe.config._

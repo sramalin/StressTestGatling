@@ -5,7 +5,7 @@ import io.gatling.http.Predef._
 
 
 
-class SampleGET extends Simulation {
+class sampleGET extends Simulation {
 
 	
 	val headers_0 = Map(
