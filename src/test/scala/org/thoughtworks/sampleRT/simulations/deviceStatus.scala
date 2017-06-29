@@ -12,6 +12,8 @@ class deviceStatus extends Simulation {
 
   val targetEnv = System.getProperty("targetEnv")
   var file:File = new File(targetEnv+".conf")
+  println("### file absolute path: ###"+ file.getAbsolutePath)
+  println("### file path: ###"+ file.getPath)
   val conf = ConfigFactory.parseFile(file)
   val uri1 =conf.getString("BaseURL")
   val userName = conf.getString("userName")
